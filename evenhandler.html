@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handelr</title>
+</head>
+
+<body>
+    <button onclick="makeGreen()">Green</button>
+
+    <button id="red">red</button>
+    <button id="gray">Gray</button>
+    <button id="black">Orange</button>
+    <button id="ntgButton">Add some nothing </button>
+    <section id="container">
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        function makeGreen() {
+            document.body.style.backgroundColor = 'green'
+        }
+
+        const buttonred = document.getElementById('red')
+        buttonred.onclick = function makeRed() {
+            document.body.style.backgroundColor = 'red'
+        }
+        const grayButton = document.getElementById('gray')
+        grayButton.onclick = function makeGray() {
+            document.body.style.backgroundColor = 'gray'
+        }
+
+        document.getElementById('black').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'orange'
+        })
+
+        document.getElementById('ntgButton').addEventListener('click', function() {
+            const sectionContainer = document.getElementById('container')
+            const ul = document.createElement('ul')
+            ul.innerHTML = `
+    <li>Sajek Velly</li>
+    <li>Rangamati</li>
+    <li>Canada</li>
+    <li>Brazil</li>
+    `
+            sectionContainer.appendChild(ul)
+        })
+    </script>
+</body>
+
+</html>
